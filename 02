@@ -1,0 +1,56 @@
+package java08;
+
+interface Data
+{
+   public void showData();
+}
+interface Test
+{
+   public void showScore();
+   public int calcu();
+}
+class CStu implements Data,Test
+{
+   protected String color;    // 顏色
+   protected int width;      
+   protected int height;     
+     
+
+   public CStu(String s1,int m,int f)
+   {
+      color=s1;
+      width=m;
+      height=f;
+     
+   }
+   public void show()
+   {
+      showData();
+      showScore();
+   }
+   public void showScore()
+   {
+      System.out.println("width="+width);
+      System.out.println("height="+height);
+      System.out.println("area="+calcu());
+   }
+   public void showData()
+   {
+      System.out.println("color="+color);
+      
+   }
+   public int calcu()
+   {
+      return (width*height);
+   }
+}
+
+public class java02
+{
+   public static void main(String args[])
+   {
+      CStu stu=new CStu("Green",5,7);
+      stu.show();
+   }
+}
+
